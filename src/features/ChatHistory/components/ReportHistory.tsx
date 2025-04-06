@@ -46,7 +46,7 @@ const ReportHistory = () => {
                   <SummarizeIcon />
                 </ListItemIcon>
                 <ListItemText
-                  primary={report.message.slice(0, 32)}
+                  primary={report.message!.slice(0, 32)}
                   secondary={new Date().toISOString()}
                 />
                 <Tooltip className="right-0" title="Download">
@@ -55,7 +55,7 @@ const ReportHistory = () => {
                     size="large"
                     onClick={() =>
                       handleDownload(
-                        report.message,
+                        report.message!,
                         `${report.dateTime}_report`
                       )
                     }
